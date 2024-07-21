@@ -90,7 +90,7 @@ const options = {
     Authorization: `Bearer  ${process.env.NEXT_PUBLIC_API_KEY}`,
     "X-User-Token": `${process.env.NEXT_PUBLIC_USER_TOKEN}`,
   },
-  data: { idempotencyKey: idempotencyKey, blockchains: ["MATIC-MUMBAI"] },
+  data: { idempotencyKey: idempotencyKey, blockchains: ["MATIC-AMOY"] },
 };
 ```
 
@@ -104,7 +104,7 @@ const options = {
 
 - `headers: {...}`: This object contains the headers that will be included in the HTTP request. The headers include the content type, authorization token, and user token.
 
-- `data: { idempotencyKey: idempotencyKey, blockchains: ["MATIC-MUMBAI"] }`: This is the data that will be sent in the body of the HTTP request. It includes the idempotency key and a list of blockchains.
+- `data: { idempotencyKey: idempotencyKey, blockchains: ["MATIC-AMOY"] }`: This is the data that will be sent in the body of the HTTP request. It includes the idempotency key and a list of blockchains.
 
 ### Idempotency Key
 
@@ -112,7 +112,7 @@ During the initialization request, you must use an idempotency key, which is a u
 
 ### Blockchains
 
-With the `blockchains: [<Blockchain>]`, we are indicating which chain we want to work with. We can choose Ethereum or Polygon(Matic). In this project you are working with `Polygon's testnet MATIC-MUMBAI`.
+With the `blockchains: [<Blockchain>]`, we are indicating which chain we want to work with. We can choose Ethereum or Polygon(Matic). In this project you are working with `Polygon's testnet MATIC-AMOY`.
 
 ```javascript
 return axios
